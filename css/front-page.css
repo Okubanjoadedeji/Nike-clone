@@ -27,6 +27,7 @@ li{
 
 h1,h2,h3,h4,h5,h6{
   cursor: pointer;
+  font-weight: 500;
 }
 
 :root{
@@ -95,6 +96,7 @@ h1,h2,h3,h4,h5,h6{
 .btn{
   padding: 8px 20px;
   border-radius: 20px;
+  font-weight: 500;
 }
 
 .btn-black{
@@ -315,11 +317,11 @@ nav{
   margin-top: 48px;
 }
 
-.hero-text{
+.hero-subject{
   margin: 0 auto;
 }
 
-.hero-text h1{
+.hero-subject h1{
   display: flex;
   justify-content: center;
   font-family: var(--display);
@@ -327,7 +329,7 @@ nav{
   font-weight: 500;
 }
 
-.hero-text p{
+.hero-subject p{
   margin-top: 28px;
 }
 
@@ -403,7 +405,6 @@ section .sect-header h3{
 }
 
 .slider-image-wrapper{
-  margin-right: 16px;
   flex-shrink: 0;
 }
 
@@ -459,6 +460,19 @@ section .sect-header h3{
 /* ?New Fall Style end */
 
 
+/* new membership */
+.membership-container{
+  overflow-x: scroll;
+  transition: all .1ms linear;
+}
+
+/* ?new membership */
+
+
+
+
+
+
 @media only screen and (max-width:960px) {
   .header{
     display: none;
@@ -487,6 +501,11 @@ section .sect-header h3{
     flex-direction: column;
   }
 
+  .hero-text, .hero-subject{
+    width: 100%;
+  }
 
-
+  .trending-text h2{
+    transform: scale(0.9);
+  }
 }
