@@ -25,6 +25,10 @@ li{
   list-style: none;
 }
 
+h1,h2,h3,h4,h5,h6{
+  cursor: pointer;
+}
+
 :root{
   /* font */
   --ibm: 'IBM Plex Sans',sans-serif;
@@ -49,6 +53,8 @@ li{
 .display{ font-family: var(--display);}
 .flex{ display: flex;}
 .space-between{ justify-content: space-between;}
+.justify-center{ justify-content: center;}
+.inline-flex{ display: inline-flex;}
 .inline-block{ display: inline-block;}
 .align-center{align-items: center;}
 .relative{ position: relative;}
@@ -69,6 +75,7 @@ li{
 .font-display-1{ font-size: var(--font-display-1);}
 .font-h3{ font-size: var(--font-h3);}
 .font-h4{ font-size: var(--font-h4);}
+
 .width-full{ width: 100%;}
 .width-half{ width: 50%;}
 .height-full{ height: 100%;}
@@ -115,7 +122,7 @@ header .header_logo li {
   padding: 8px;
 }
 
-.header .header_links li {
+header .header_links li {
   padding-left: 8px;
 }
 
@@ -124,7 +131,7 @@ header .header_logo li {
   height: auto;
 }
 
-.header .header_links li > a{
+header .header_links li > a{
   font-weight: 500;
 }
 
@@ -310,12 +317,14 @@ nav{
 
 .hero-text{
   margin: 0 auto;
-
 }
 
 .hero-text h1{
+  display: flex;
+  justify-content: center;
   font-family: var(--display);
   line-height: 1;
+  font-weight: 500;
 }
 
 .hero-text p{
@@ -327,6 +336,7 @@ nav{
   justify-content: center;
   font-weight: 500;
   z-index: 3;
+  flex-wrap: wrap;
 }
 
 
@@ -344,6 +354,11 @@ section .sect-header h3{
   font-weight: 500;
 }
 
+.ct-item{
+  max-width: 1378px;
+  margin: 0 auto;
+}
+
 .sect-header, .trending-text {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -355,16 +370,16 @@ section .sect-header h3{
 /* Featured */
 .over-l{
   text-align: left;
-  top: 72%;
-  transform: translate(-50%, -50%);
+  bottom: 12%;
 }
 
-.figc1{
-  left: 24%;
+.ct-item-2{
+  max-width: 1332px;
+  margin: 0 auto;
 }
 
-.figc2{
-  left: 18%;
+.figc1, .figc2{
+  left: 8%;
 }
 
 .f-p{
@@ -444,4 +459,33 @@ section .sect-header h3{
 /* ?New Fall Style end */
 
 
+@media only screen and (max-width:960px) {
+  .header{
+    display: none;
+  }
 
+  .nav-links{
+    display: none;
+  }
+
+  .figc1, .figc2{
+    transform: scale(0.8);
+    left: 2%;
+  }
+  
+  
+
+}
+
+
+@media only screen and (max-width:660px) {
+  .hero-text h1{
+    transform: scale(0.9);
+  }
+
+  .trending-container ul, .featured-container ul{
+    flex-direction: column;
+  }
+
+
+}
