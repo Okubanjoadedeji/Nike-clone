@@ -501,7 +501,7 @@ section .sect-header h3{
     flex-direction: column;
   }
 
-  .hero-text, .hero-subject{
+  .hero-subject{
     width: 100%;
   }
 
